@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ item.name }}</title>
+    </head>
+
+    <body>
+        <a href="/dashboard">Home</a>
+        <a href="/logout">Logout</a>
+        <h1>{{ item.name}}</h1>
+        <p>Users who added this item under their wish list:</p>
+        {%for user in item.items_to_user.all %}
+        <p>{{ user.username}}</p>
+        {% endfor %}
+    </body>
+</html>
+
